@@ -27,10 +27,81 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button13"
+                    android:id="@+id/b_bgcolor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Button" />
+                    android:text="BackGroundColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/b_blur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Blur"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/b_brightness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Brightness"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/b_contrast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contrast"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/b_equalize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Equalize"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/b_grayscale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Grayscale"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/b_rgb_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RGBAmount"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/b_rotate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rotate"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/b_max_bytes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MaxBytes"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/b_noise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Noise"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/b_quality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quality"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
 
             </LinearLayout>
         </ScrollView>
