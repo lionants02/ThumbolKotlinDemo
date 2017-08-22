@@ -20,6 +20,7 @@ class ImageView : AppCompatActivity() {
         setContentView(R.layout.activity_image_view)
 
         var controller :Controller  =Controller(createUrl,this,imageView)
+        controller.updateUI()
         /* val tv :TelephonyManager
          tv = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
 
@@ -59,36 +60,45 @@ class ImageView : AppCompatActivity() {
 
 */
 
-
         b_blur.setOnClickListener {
-            controller.createDialog("Blur",InputType.TYPE_CLASS_NUMBER, { createUrl.blur = controller.outputValue })
+            controller.createDialog("Blur", InputType.TYPE_CLASS_NUMBER, { createUrl.blur = it
+                controller.createDialog("Blur Sigma", InputType.TYPE_CLASS_NUMBER, { createUrl.blur_sigma = it
+                })
+            },updateUI = false)
         }
         b_brightness.setOnClickListener {
-            controller.createDialog("Blur",InputType.TYPE_CLASS_NUMBER, { createUrl.brightness = controller.outputValue })
+            controller.createDialog("Brightness", InputType.TYPE_CLASS_NUMBER, { createUrl.brightness = it })
         }
 
         b_contrast.setOnClickListener {
-            controller.createDialog("Blur",InputType.TYPE_CLASS_NUMBER, { createUrl.contrast = controller.outputValue })
+            controller.createDialog("Contrast", InputType.TYPE_CLASS_NUMBER, { createUrl.contrast = it })
         }
 
 
         b_equalize.setOnClickListener {
-            controller.createDialog("Blur",InputType.TYPE_CLASS_NUMBER, { createUrl.equalize=true },{createUrl.equalize=false})
+            controller.createDialog("Equalize", InputType.TYPE_CLASS_NUMBER, { createUrl.equalize = true }, { createUrl.equalize = false })
         }
         b_grayscale.setOnClickListener {
-            controller.createDialog("Blur",InputType.TYPE_CLASS_NUMBER, { createUrl.grayscale = true },{ createUrl.grayscale = false })
+            controller.createDialog("Grayscale", InputType.TYPE_CLASS_NUMBER, { createUrl.grayscale = true }, { createUrl.grayscale = false })
 
         }
         b_rotate.setOnClickListener {
-            controller.createDialog("Blur",InputType.TYPE_CLASS_NUMBER, { createUrl.rotate = controller.outputValue })
+            controller.createDialog("Rotate", InputType.TYPE_CLASS_NUMBER, { createUrl.rotate = it })
         }
 
-       /* b_max_bytes.setOnClickListener {
-            controller.createDialog("Blur",InputType.TYPE_CLASS_NUMBER, { createUrl.max_bytes = controller.outputValue.toFloat().toInt() })
-        }*/
+        b_rgb_amount.setOnClickListener(){
+            controller.createDialog("RGB Amount Red", InputType.TYPE_CLASS_NUMBER, { createUrl.rgb_amount.rAmount = it
+                controller.createDialog("RGB Amount Green", InputType.TYPE_CLASS_NUMBER, { createUrl.rgb_amount.gAmount = it
+                    controller.createDialog("RGB Amount Blur", InputType.TYPE_CLASS_NUMBER, { createUrl.rgb_amount.bAmount = it
+                    })
+                },updateUI = false)
+            },updateUI = false)
+        }
+
+
 
         b_noise.setOnClickListener {
-            controller.createDialog("Blur",InputType.TYPE_CLASS_NUMBER, { createUrl.noise = controller.outputValue })
+            controller.createDialog("Noise", InputType.TYPE_CLASS_NUMBER, { createUrl.noise = it })
         }
 
 

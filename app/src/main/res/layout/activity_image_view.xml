@@ -117,6 +117,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:srcCompat="@android:color/holo_green_light" />
+
+            <TextView
+                android:id="@+id/tv_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:text="ttt" />
+
         </FrameLayout>
     </LinearLayout>
 
